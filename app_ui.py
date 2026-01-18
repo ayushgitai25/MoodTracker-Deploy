@@ -58,7 +58,7 @@ def get_genz_vibe(emotion):
 DEFAULT_URL = "http://localhost:8000/predict"
 API_URL = os.getenv("BACKEND_URL", DEFAULT_URL)
 
-st.set_page_config(page_title="CNN-RNN Mood Tracker (Gen-Z style)", page_icon="🧠", layout="wide")
+st.set_page_config(page_title="Hybrid CNN-ANN Emotion Recognition System (Gen-Z style)", page_icon="🧠", layout="wide")
 
 # --- CYBERPUNK CSS STYLING ---
 st.markdown("""
@@ -138,7 +138,7 @@ with st.sidebar:
 
 # --- UI LAYOUT ---
 # UPDATED TITLE AS REQUESTED
-st.title("CNN-ANN-RNN MOOD TRACKER")
+st.title("Hybrid CNN-ANN Emotion Recognition System (Gen-Z style)")
 st.markdown("<p style='text-align: center; color: #b0b0b0;'>Hybrid Neural Architecture • Facial Expression Analysis</p>", unsafe_allow_html=True)
 st.write("---")
 
