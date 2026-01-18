@@ -8,7 +8,7 @@ pinned: false
 app_port: 7860
 ---
 
-# 🧠 CNN-RNN Mood Tracker (Gen Z Edition)
+# 🧠 CNN-ANN Emotion Recognition System (Gen Z Edition)
 
 A real-time facial emotion recognition system powered by a hybrid **Convolutional Neural Network (CNN)** architecture. This application detects micro-expressions in milliseconds and classifies them into 7 core emotions (Happy, Sad, Angry, Surprise, Fear, Disgust, Neutral) with a "Vibe Check" twist.
 
