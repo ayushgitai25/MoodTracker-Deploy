@@ -1,5 +1,5 @@
 ---
-title: CNN-RNN Mood Tracker (Gen-Z Style)
+title: CNN-RNN Mood Tracker
 emoji: 🧠
 colorFrom: blue
 colorTo: pink
@@ -10,10 +10,11 @@ app_port: 7860
 
 # 🧠 CNN-RNN Mood Tracker (Gen Z Edition)
 
-A real-time facial emotion recognition system powered by a hybrid **Convolutional Neural Network (CNN)** architecture. This application detects micro-expressions in milliseconds and classifies them into 7 core emotions (Happy, Sad, Angry, Surprise, Fear, Disgust, Neutral).
+A real-time facial emotion recognition system powered by a hybrid **Convolutional Neural Network (CNN)** architecture. This application detects micro-expressions in milliseconds and classifies them into 7 core emotions (Happy, Sad, Angry, Surprise, Fear, Disgust, Neutral) with a "Vibe Check" twist.
+
+### 🔗 **[Click Here to Try the Live Demo](https://huggingface.co/spaces/ayushhgface25/CRNN_MoodTracker)**
 
 ![Demo Preview](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3R4cW55eHl5eHl5eHl5/giphy.gif)
-*(Optional: You can replace this link with a screenshot of your app later)*
 
 ---
 
