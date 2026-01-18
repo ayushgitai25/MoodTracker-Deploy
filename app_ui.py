@@ -3,12 +3,64 @@ import requests
 import os
 from PIL import Image
 
+import random
+
+def get_genz_vibe(emotion):
+    """
+    Translates boring emotions into Gen Z slang.
+    """
+    vibes = {
+        "happy": [
+            "Bestie is GLOWING! Main character energy fr. ✨",
+            "W Rizz. Absolutely slaying the day. 💅",
+            "No cap, you lookin' fresh. 🧢🚫"
+        ],
+        "sad": [
+            "Down bad? Go touch grass or get a sweet treat. 🍩",
+            "It's giving... moody aesthetic. Alexa play Lana Del Rey. 🎻",
+            "Big oof. Emotional damage. 💀"
+        ],
+        "angry": [
+            "Who hurt you? You woke up and chose violence. 🔪",
+            "Lowkey salty. Take a chill pill fam. 🧂",
+            "Pressed. Extremely pressed. 😤"
+        ],
+        "surprise": [
+            "GAGGED. Shooketh. I was not ready. 🤯",
+            "Bombastic side eye... what did you just see? 👀",
+            "Real life plot twist just dropped. 🎬"
+        ],
+        "fear": [
+            "Spooky szn came early? 👻",
+            "Ngl you look terrified. Blink twice if you need help. 🚩",
+            "Anxiety has entered the chat. 📉"
+        ],
+        "disgust": [
+            "Major ick. The cringe is real. 🤢",
+            "Bombastic side eye. Criminal offensive side eye. 😒",
+            "Eww brother, eww. What's that? 🤮"
+        ],
+        "neutral": [
+            "NPC energy. Just vibes. 😐",
+            "Mid. Not great, not terrible. Just... existing. 😶",
+            "Poker face strong. Are you even real? 🤖"
+        ]
+    }
+    
+    # Return a random funny message for that emotion
+    # .lower() ensures it matches regardless of capitalization
+    return random.choice(vibes.get(emotion.lower(), ["Vibe check failed. 404 Error. 👾"]))
+
+
+
+
+
 # --- CONFIGURATION ---
 # Default to localhost, but allow Cloud override
 DEFAULT_URL = "http://localhost:8000/predict"
 API_URL = os.getenv("BACKEND_URL", DEFAULT_URL)
 
-st.set_page_config(page_title="CNN-RNN Mood Tracker", page_icon="🧠", layout="wide")
+st.set_page_config(page_title="CNN-RNN Mood Tracker (Gen-Z style)", page_icon="🧠", layout="wide")
 
 # --- CYBERPUNK CSS STYLING ---
 st.markdown("""
@@ -129,13 +181,21 @@ if img_file is not None:
                 raw_emotion = data['emotion']
                 conf = data['confidence']
                 
-                # Map to Emoji
+                # 1. Map to Emoji
                 final_label = EMOJI_MAPPING.get(raw_emotion, raw_emotion)
                 
-                # Update Stats
+                # 2. Get the Gen Z Vibe Message
+                vibe_text = get_genz_vibe(raw_emotion)
+
+                # 3. Update Standard Metrics
                 kpi1.metric(label="PREDICTED EMOTION", value=final_label)
-                kpi2.metric(label="CONFIDENCE", value=f"{conf}%", delta=f"{conf - 50:.1f}%")
-                
+                kpi2.metric(label="CONFIDENCE", value=f"{conf}%")
+
+                # 4. SHOW THE VIBE CHECK (This is the new part!)
+                st.markdown("---")
+                st.markdown(f"<h2 style='text-align: center; color: #00FF00;'>✨ VIBE CHECK ✨</h2>", unsafe_allow_html=True)
+                st.info(f"**{vibe_text}**")
+
                 if "Happy" in raw_emotion:
                     st.balloons()
             else:
