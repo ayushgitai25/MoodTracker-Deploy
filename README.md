@@ -1,5 +1,5 @@
 ---
-title: CNN-RNN Mood Tracker
+title: CNN-RNN Mood Tracker (Gen-Z Style)
 emoji: 🧠
 colorFrom: blue
 colorTo: pink
