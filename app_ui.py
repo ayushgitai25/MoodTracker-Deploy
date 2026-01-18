@@ -53,8 +53,6 @@ def get_genz_vibe(emotion):
 
 
 
-
-
 # --- CONFIGURATION ---
 # Default to localhost, but allow Cloud override
 DEFAULT_URL = "http://localhost:8000/predict"
