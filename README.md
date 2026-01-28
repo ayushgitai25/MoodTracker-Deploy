@@ -8,7 +8,7 @@ pinned: false
 app_port: 7860
 ---
 
-# 🧠 NeuroVibe: Hybrid CNN-ANN Emotion Recognition System
+# 🧠 Hybrid CNN-ANN Emotion Recognition System
 
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/)
 [![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)](https://opencv.org/)
