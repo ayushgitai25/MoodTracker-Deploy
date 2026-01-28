@@ -14,8 +14,6 @@ A real-time facial emotion recognition system powered by a hybrid **Convolutiona
 
 ### 🔗 **[Click Here to Try the Live Demo](https://huggingface.co/spaces/ayushhgface25/CRNN_MoodTracker)**
 
-![Demo Preview](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3R4cW55eHl5eHl5eHl5/giphy.gif)
-
 ---
 
 ## 📂 Dataset Information (Important!)
