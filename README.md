@@ -49,7 +49,7 @@ It uses a decoupled microservice architecture where a **FastAPI** backend handle
 
 How do we get from raw pixels to a "Vibe Check"?
 
-![Architecture Diagram](https://via.placeholder.com/800x300.png?text=Input+Video+->+OpenCV+Face+Detect+->+CNN+Feature+Extract+->+ANN+Classify+->+Temporal+Smoothing+->+Vibe+Check)
+![Architecture Diagram](https://github.com/ayushgitai25/MoodTracker-Deploy/blob/main/cnn_ann_architecture.png)
 
 1.  **Input:** Raw video frames are captured asynchronously.
 2.  **Preprocessing (OpenCV):** Faces are detected using Haar Cascades, cropped (ROI), converted to grayscale, and normalized.
